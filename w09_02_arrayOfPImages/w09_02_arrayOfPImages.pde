@@ -13,21 +13,28 @@
 // all the images by looping through the results of filling the
 // arrayOfPImages. 
 
-String[] arrayOfImageFilenames = {"1.png", "2.png", "3.png", "4.png", "5.png"};
-PImage[] arrayOfPImages = new PImage[5];
+//String[] arrayOfImageFilenames = {"0.png",
+//                                  "1.png",
+//                                  "2.png",
+//                                  "3.png",
+//                                  "4.png"};
+String[] arrayOfImageFilenames = new String[5];
+PImage[] arrayOfPImages = new PImage[arrayOfImageFilenames.length];
 
 void setup() {
   size(600,600);
+  imageMode(CENTER);
+  for (int i = 0; i < arrayOfImageFilenames.length; i++) {
+    arrayOfImageFilenames[i] = i + ".png";
+  }
   for (int i = 0; i < arrayOfImageFilenames.length; i++) {
     arrayOfPImages[i] = loadImage(arrayOfImageFilenames[i]);  
   }
 }
 
 void draw() {
-  for (int i = 0; i < arrayOfImageFilenames.length; i++) {
-    image(arrayOfPImages[i], 0, 0);
-    // when i run the sketch nothing seems to happen
-    // but using println shows that it IS looping through the images?
-    println(arrayOfImageFilenames[i]);
+  for (int i = 0; i < arrayOfPImages.length; i++) {
+    float x = map(i, 0, arrayOfPImages.length -1, 100, width-100);
+    image(arrayOfPImages[i], x, height/2, 100, 100);
   }
 }
