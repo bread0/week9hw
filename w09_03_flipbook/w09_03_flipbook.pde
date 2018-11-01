@@ -33,20 +33,20 @@ class Images {
   int numFrames = 12;
   int currentFrame = 0;
   PImage[] frames = new PImage[numFrames];
-  frames[0]  = loadImage("PT_anim0000.gif");
-  frames[1]  = loadImage("PT_anim0001.gif"); 
-  frames[2]  = loadImage("PT_anim0002.gif");
-  frames[3]  = loadImage("PT_anim0003.gif"); 
-  frames[4]  = loadImage("PT_anim0004.gif");
-  frames[5]  = loadImage("PT_anim0005.gif"); 
-  frames[6]  = loadImage("PT_anim0006.gif");
-  frames[7]  = loadImage("PT_anim0007.gif"); 
-  frames[8]  = loadImage("PT_anim0008.gif");
-  frames[9]  = loadImage("PT_anim0009.gif"); 
-  frames[10] = loadImage("PT_anim0010.gif");
-  frames[11] = loadImage("PT_anim0011.gif");
 
   Images() {
+    frames[0]  = loadImage("01.jpg");
+    frames[1]  = loadImage("02.jpg"); 
+    frames[2]  = loadImage("03.jpg");
+    frames[3]  = loadImage("04.jpg"); 
+    frames[4]  = loadImage("05.jpg");
+    frames[5]  = loadImage("06.jpg"); 
+    frames[6]  = loadImage("07.jpg");
+    frames[7]  = loadImage("08.jpg"); 
+    frames[8]  = loadImage("09.jpg");
+    frames[9]  = loadImage("10.jpg"); 
+    frames[10] = loadImage("11.jpg");
+    frames[11] = loadImage("12.jpg");
   }
 
   void display() {
